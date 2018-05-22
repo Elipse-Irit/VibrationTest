@@ -37,57 +37,41 @@ public class MainActivity extends Activity implements OnClickListener {
     }
     @Override
     public void onClick(View v) {
-
+        long[] mVibratePattern;
         switch (v.getId()) {
             case R.id.button1:
-                customVibrate1();
+                // 0 : Start without a delay
+                // 400 : Vibrate for 400 milliseconds
+                // 200 : Pause for 200 milliseconds
+                // 400 : Vibrate for 400 milliseconds
+                mVibratePattern = new long[]{0, 400, 200, 400};
+                customVibrate(mVibratePattern);
                 break;
 
             case R.id.button2:
-                customVibrate2();
+                mVibratePattern = new long[]{0, 400, 200, 400};
+                customVibrate(mVibratePattern);
                 break;
 
             case R.id.button3:
-                customVibrate3();
+                mVibratePattern = new long[]{0, 400, 200, 400};
+                customVibrate(mVibratePattern);
                 break;
 
             case R.id.button4:
-                customVibrate4();
+                mVibratePattern = new long[]{0, 400, 200, 400};
+                customVibrate(mVibratePattern);
                 break;
 
             case R.id.button5:
-                customVibrate5();
+                mVibratePattern = new long[]{0, 1000, 200, 1000};
+                customVibrate(mVibratePattern);
                 break;
         }
 
     }
 
-    private void customVibrate1() {
-        // 0 : Start without a delay
-        // 400 : Vibrate for 400 milliseconds
-        // 200 : Pause for 200 milliseconds
-        // 400 : Vibrate for 400 milliseconds
-        long[] mVibratePattern = new long[]{0, 400, 200, 400};
-        vibrator.vibrate(mVibratePattern, -1);
-    }
-
-    private void customVibrate2() {
-        long[] mVibratePattern = new long[]{0, 400, 200, 400};
-        vibrator.vibrate(mVibratePattern, -1);
-    }
-
-    private void customVibrate3() {
-        long[] mVibratePattern = new long[]{0, 400, 200, 400};
-        vibrator.vibrate(mVibratePattern, -1);
-    }
-
-    private void customVibrate4() {
-        long[] mVibratePattern = new long[]{0, 1000, 200, 400};
-        vibrator.vibrate(mVibratePattern, -1);
-    }
-
-    private void customVibrate5() {
-        long[] mVibratePattern = new long[]{0, 800, 200, 400};
+    private void customVibrate(long[] mVibratePattern) {
         vibrator.vibrate(mVibratePattern, -1);
     }
 }
