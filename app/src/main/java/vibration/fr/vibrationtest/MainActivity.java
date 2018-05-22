@@ -44,6 +44,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 // 400 : Vibrate for 400 milliseconds
                 // 200 : Pause for 200 milliseconds
                 // 400 : Vibrate for 400 milliseconds
+                // and so on ...
                 mVibratePattern = new long[]{0, 400, 200, 400};
                 customVibrate(mVibratePattern);
                 break;
